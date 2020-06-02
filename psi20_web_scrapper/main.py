@@ -23,12 +23,12 @@ def get_stocks():
         # pprint(stock)
         print(stock)
         if stock is None:
-            stocks.insert_one({'name': name, 'currPrice': f, 'histPrices': [], 'v': 1})
+            stocks.insert_one({'name': name, 'curr_price': f, 'histPrices': [], 'v': 1})
             print("{} -> {}: V{}".format(name, f, 1))
         else:
             if 'v' not in stock:
                 stock['v'] = 0
-            update_query = {"$set": {"currPrice": f, 'v': stock['v'] + 1}}
+            update_query = {"$set": {"curr_price": f, 'v': stock['v'] + 1}}
             stocks.update_one(find_by_name, update_query)
             print("{} -> {}: V{}".format(name, f, stock['v'] + 1))
 
