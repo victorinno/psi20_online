@@ -10,7 +10,7 @@ Here is an overview of the projects:
 
 ## Running
 
-To run everything you'll need docker and docker-compose installed, just run docker-compose up in root folder.
+To run everything you'll need docker and docker-compose installed, just run docker-compose build and docker-compose up in root folder.
 
 After everything is ok access [http://localhost:4200](http://localhost:4200)
 
